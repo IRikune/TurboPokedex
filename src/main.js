@@ -1,5 +1,5 @@
 import './styles/styles.css'
-import { getPokemons, getPokemonInfo } from './components/pokemons.services.js'
+import { getPokemons, getPokemonInfo } from './services/pokemons.services.js'
 const { results } = await getPokemons()
 const renderApp = async () => {
   const pokemonPromises = results.map(async pokemon => {
