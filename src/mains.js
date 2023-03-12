@@ -1,13 +1,10 @@
-import './styles/styles.css'
 import { getPokemons, getPokemonInfo } from './components/pokemons.services.js'
-const { results } = await getPokemons()
-const renderApp = async () => {
+
+const renderPokemonList = async () => {
+  const { results } = await getPokemons()
   const pokemonPromises = results.map(async pokemon => {
-    const { name, id } = await getPokemonInfo(pokemon.name)
-    return `
-    <li>${name[0].toUpperCase() + name.slice(1)}</li>
-    <img src=${`https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/${id}.svg`}></img>
-    `
+    const { name } = await getPokemonInfo(pokemon.name)
+    return `<li>${name}</li>`
   })
   const pokemonList = await Promise.all(pokemonPromises)
   document.querySelector('#app').innerHTML = `
@@ -18,4 +15,4 @@ const renderApp = async () => {
   `
 }
 
-renderApp()
+renderPokemonList()
