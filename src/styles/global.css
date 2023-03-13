@@ -1,3 +1,70 @@
+/* Backgrounds with color Palette */
+.bgEmerald{
+    background-color: #2ecc71;
+}
+.bgAlizarin{
+    background-color: #e74c3c;
+}
+.bgPeterRiver{
+    background-color: #3498db;
+}
+.bgSunFlower{
+    background-color: #f1c40f;
+}
+.bgAmethist{
+    background-color: #9b59b6;
+}
+.bgCarrot{
+    background-color: #e67e22;
+}
+.bgWisteria{
+    background-color: #8e44ad;
+}
+.bgPumkin{
+    background-color: #d35400;
+}
+.bgPomegranate{
+    background-color: #c0392b;
+}
+.bgTurquoise{
+    background-color: #1abc9c;
+}
+.bgGreenSea{
+    background-color: #16a085;
+}
+.bgOrange{
+    background-color: #f39c12;
+}
+.bgNephritis{
+    background-color: #27ae60;
+}
+.bgClouds{
+    background-color: #ecf0f1;
+}
+.bgSilver{
+    background-color: #bdc3c7;
+}
+.bgWetAsphalt{
+    background-color: #34495e;
+}
+.bgMidnightBlue{
+    background-color: #2c3e50;
+}
+.bgConcrete{
+    background-color: #95a5a6;
+}
+.bgAsbestos{
+    background-color: #7f8c8d;
+}
 *{
-    font-family: 'poppìns', sans-serif;
+    font-family: 'Nunito', sans-serif;
+    box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+li{
+    list-style: none;
 }
