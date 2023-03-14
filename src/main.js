@@ -1,20 +1,21 @@
 import './styles/styles.css'
-import { getPokemons, getPokemonInfo } from './services/pokemons.services.js'
-const { results } = await getPokemons()
+import { pokemonPromises } from './components/PokeList/PokeList.js'
+import { category } from './components/categories/category.js'
+
+const pokemonList = await Promise.all(pokemonPromises)
+
 const renderApp = async () => {
-  const pokemonPromises = results.map(async pokemon => {
-    const { name, id } = await getPokemonInfo(pokemon.name)
-    return `
-    <li>${name[0].toUpperCase() + name.slice(1)}</li>
-    <img src=${`https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/${id}.svg`}></img>
-    `
-  })
-  const pokemonList = await Promise.all(pokemonPromises)
   document.querySelector('#app').innerHTML = `
-    <div>
       <h1>What Pokemon are you looking for?</h1>
-      <ul>${pokemonList.join('')}</ul>
-    </div>
+      <section class='categories'>
+      ${category('Pokedex', '/Pokedex', 'bgEmerald')}
+      ${category('Moves', '/Moves', 'bgAlizarin')}
+      ${category('Abilities', '/Abilities', 'bgPeterRiver')}
+      ${category('Items', '/Items', 'bgSunFlower')}
+      ${category('Locations', '/Locations', 'bgAmethist')}
+      ${category('Type Charts', '/types', 'bgCarrot')}
+      </section>
+      ${pokemonList.join('')}
   `
 }
 
