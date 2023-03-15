@@ -3,6 +3,13 @@ h1{
     font-size: 40px;
     margin: 20px;
 }
+img{
+    width: 100px;
+    height: 100px;
+}
+
+/* Categories Section */
+
 .categories{
     display: flex;
     flex-wrap: wrap;
@@ -10,23 +17,32 @@ h1{
     margin: 0 auto;
     width: 100%;
 }
+/* Category Component */
 .category{
     display: flex;
     color: #fff;
     margin: 10px;
-    min-width: 200px;
+    width: 220px;
+    justify-content: space-between;
     align-items: center;
     height: 70px;
     border-radius: 20px;
     cursor: pointer;
     opacity: .9;
+    overflow: hidden;
+    filter: saturate(.9);
 }
 .category h3{
     font-size: 18px;
     margin-left: 15px;
     text-shadow: 1px 0px 10px #00000040;
 }
-img{
-    width: 100px;
-    height: 100px;
+.category img {
+    transform: translateX(15px) scale(1.4);
+}
+/* Media Queries for desktop */
+@media (min-width: 960px) and (orientation: landscape){
+    .category{
+        margin: 10px 5%;
+    }
 }
