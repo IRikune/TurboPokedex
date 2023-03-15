@@ -7,7 +7,7 @@ export function pokeCard (id, name, types) {
         <img 
         async
         lazy
-        src=${`https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/${id}.svg`}>
+        src=${`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${id}.svg`}>
         </img>
         </article>
     </li>
