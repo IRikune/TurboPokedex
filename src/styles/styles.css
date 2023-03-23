@@ -46,3 +46,52 @@ img{
         margin: 10px 5%;
     }
 }
+/* Pokemon News Section */
+.news header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 5%;
+}
+.news header a{
+    font-size: 20px;
+    color: #8e44ad;
+    text-decoration: none;
+    font-style: italic;
+}
+/* Pokemon New Article */
+.news article{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px inset;
+    margin: 10px;
+    padding: 10px 10px;
+    border-radius: 10px;
+}
+.news article:hover{
+    box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px inset;
+    background-color: #f5f5f5;
+    transition: .3s;
+}
+.news article h3{
+    font-size: 16px;
+    width: 50%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 10px;
+}
+.news article img{
+    width: 120px;
+    border-radius: 10px;
+}
+.news article time{
+    color: #95a5a6c7;
+    margin-left: 10px;
+}
+@media (min-width: 700px){
+    .news main{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
