@@ -1,5 +1,5 @@
 import '../../../public/pokeball.svg'
-export const category = (category, path = '#', color = '') => {
+export const Category = (category, path = '#', color = '') => {
   return `
         <article 
         style='
