@@ -1,6 +1,6 @@
 import { PokemonNew } from './PokemonNew'
-import { getPokemonNews, statusNotOk } from './../../services/pokemons.services'
-const { articles, status } = await getPokemonNews()
+import { getData, statusNotOk } from './../../services/pokemons.services'
+const { articles, status } = await getData('https://newsapi.org/v2/everything?q=pokemon&pageSize=6&apiKey=b6cd10218f214a06899135b1b28c4612')
 export const News = () => {
   if (status !== 'ok') {
     return `
@@ -25,7 +25,7 @@ export const News = () => {
         <main>
         ${articles.map(({ title, publishedAt, urlToImage }) => {
           return PokemonNew({
-             title,
+            title,
             publishedAt,
             image: urlToImage,
             statusNotOk
